@@ -23,9 +23,10 @@
       .then(data => {
         data.forEach(p => {
           const marker = L.marker([p.lat, p.lng]).addTo(map);
-          marker.bindPopup(`<b>${p.name}</b><br>${p.descr}`);
+          marker.bindPopup(`<b>${p.name}</b><br>${p.descr}<br>${p.indirizzo}`);
         });
       });
+    
 function navigateTo(destLat, destLng) {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(pos => {
