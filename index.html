@@ -50,6 +50,25 @@ marker.bindPopup(popupContent);
         alert("Geolocalizzazione non supportata");
       }
     });
+    
+    function navigateTo(destLat, destLng) {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(pos => {
+      const startLat = pos.coords.latitude;
+      const startLng = pos.coords.longitude;
+
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      const url = isMobile
+        ? `https://www.google.com/maps/dir/?api=1&origin=${startLat},${startLng}&destination=${destLat},${destLng}&travelmode=walking`
+        : `https://www.google.com/maps/dir/${startLat},${startLng}/${destLat},${destLng}`;
+
+      window.open(url, '_blank');
+    }, () => alert("Posizione non disponibile"));
+  } else {
+    alert("Geolocalizzazione non supportata");
+  }
+}
+
   </script>
 </body>
 </html>
