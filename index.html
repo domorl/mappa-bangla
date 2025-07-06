@@ -26,7 +26,7 @@
           marker.bindPopup(`<b>${p.name}</b><br>${p.descr}`);
         });
       });
-function navigateTo(destLat, destLng) {
+// function navigateTo(destLat, destLng) {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(pos => {
       const startLat = pos.coords.latitude;
