@@ -1,20 +1,20 @@
 [
   {
-    "name": "test posto 1",
-    "lat": 45.4642,
-    "lng": 9.19,
-    "descr": "test descrizione posto 1"
+    "name": "Colonne di San Lorenzo",
+    "lat": 45.4582,
+    "lng": 9.1838,
+    "descr": "BASTA USCIRE QUI"
   },
   {
-    "name": "test posto 2",
-    "lat": 47,
-    "lng": 10,
-    "descr": "test descrizione posto 2"
+    "name": "Casa Sibilio",
+    "lat": 42.8154215	,
+    "lng": 10.331220,
+    "descr": "pisellino
   },
   {
-    "name": "test posto 3",
-    "lat": 48,
-    "lng": 11,
-    "descr": "test descrizione posto 3"
+    "name": "Moysa",
+    "lat": 45.4434581	,
+    "lng": 9.1503057	,
+    "descr": "test descrizione Moysa"
   }
 ]
