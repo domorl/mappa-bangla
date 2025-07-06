@@ -4,5 +4,17 @@
     "lat": 45.4642,
     "lng": 9.19,
     "descr": "test descrizione posto 1"
+  },
+  {
+    "name": "test posto 2",
+    "lat": 47,
+    "lng": 10,
+    "descr": "test descrizione posto 2"
+  },
+  {
+    "name": "test posto 3",
+    "lat": 48,
+    "lng": 11,
+    "descr": "test descrizione posto 3"
   }
 ]
