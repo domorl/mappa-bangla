@@ -1,14 +1,14 @@
 [
   {
     "name": "Caso di cronaca 1",
-    "lat": 45.4642,
-    "lng": 9.19,
-    "descr": "Descrizione del caso 1."
+    "lat": 45.43984295297508,
+    "lng": 9.182507970807356,
+    "descr": "Casa Sibilio."
   },
   {
-    "name": "Caso di cronaca 2",
-    "lat": 40.8518,
-    "lng": 14.2681,
-    "descr": "Dettagli del caso 2."
+    "name": "Bangla test",
+    "lat": 45.44061948473208,
+    "lng": 9.174265918633141,
+    "descr": "Bangla sotto casa Dom"
   }
 ]
