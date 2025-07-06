@@ -26,6 +26,20 @@
           marker.bindPopup(`<b>${p.name}</b><br>${p.descr}<br>${p.indirizzo}`);
         });
       });
+    
+    document.getElementById('gps-button').addEventListener('click', () => {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(pos => {
+      const lat = pos.coords.latitude;
+      const lng = pos.coords.longitude;
+      map.setView([lat, lng], 14);
+      L.marker([lat, lng]).addTo(map).bindPopup("Sei qui").openPopup();
+    }, () => alert("Posizione non disponibile"));
+  } else {
+    alert("Geolocalizzazione non supportata");
+  }
+});
   </script>
+  <button id="gps-button">📍 LOCALIZZATI </button>
 </body>
 </html>
