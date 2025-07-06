@@ -2,13 +2,12 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Mappa Bangla</title>
+  <title>Mappa Criminale Clone</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <link rel="stylesheet" href="css/stile.css">
 </head>
 <body>
   <div id="map"></div>
-  <button id="gps-button">📍 Localizza</button>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
@@ -27,38 +26,6 @@
           marker.bindPopup(`<b>${p.name}</b><br>${p.descr}`);
         });
       });
-
-    document.getElementById('gps-button').addEventListener('click', () => {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(pos => {
-          const lat = pos.coords.latitude;
-          const lng = pos.coords.longitude;
-          map.setView([lat, lng], 14);
-          L.marker([lat, lng]).addTo(map).bindPopup("Sei qui").openPopup();
-        }, () => alert("Posizione non disponibile"));
-      } else {
-        alert("Geolocalizzazione non supportata");
-      }
-    });
-    
-    function navigateTo(destLat, destLng) {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(pos => {
-      const startLat = pos.coords.latitude;
-      const startLng = pos.coords.longitude;
-
-      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      const url = isMobile
-        ? `https://www.google.com/maps/dir/?api=1&origin=${startLat},${startLng}&destination=${destLat},${destLng}&travelmode=walking`
-        : `https://www.google.com/maps/dir/${startLat},${startLng}/${destLat},${destLng}`;
-
-      window.open(url, '_blank');
-    }, () => alert("Posizione non disponibile"));
-  } else {
-    alert("Geolocalizzazione non supportata");
-  }
-}
-
   </script>
 </body>
 </html>
