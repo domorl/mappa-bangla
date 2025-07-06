@@ -24,7 +24,17 @@
       .then(data => {
         data.forEach(p => {
           const marker = L.marker([p.lat, p.lng]).addTo(map);
-          marker.bindPopup(`<b>${p.name}</b><br>${p.descr}`);
+          const popupContent = `
+  <div style="min-width:200px;">
+    <h3 style="margin:0;">${p.name}</h3>
+    <p style="margin:5px 0;">${p.indirizzo}</p>
+    <button onclick="navigateTo(${p.lat}, ${p.lng})" style="padding:6px 12px; background:#007bff; color:white; border:none; border-radius:5px; cursor:pointer;">
+      📍 Clicca qui
+    </button>
+  </div>
+`;
+marker.bindPopup(popupContent);
+
         });
       });
 
