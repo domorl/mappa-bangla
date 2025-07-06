@@ -18,6 +18,7 @@
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
+    // Carica i dati dal JSON esterno
     fetch('luoghi.json')
       .then(res => res.json())
       .then(data => {
